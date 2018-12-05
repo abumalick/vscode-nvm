@@ -28,6 +28,11 @@ v10.14.0
 
 No issue known ATM
 
+## TODO
+
+- complete all features described above
+- write tests
+
 ## Release Notes
 
 ### 0.0.1
