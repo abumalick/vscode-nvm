@@ -7,6 +7,11 @@
   "author": {
     "name": "abumalick"
   },
+  "repository": {
+    "url": "git@github.com:abumalick/vscode-nvm.git",
+    "type": "git"
+  },
+  "publisher": "abumalick",
   "engines": {
     "vscode": "^1.29.0"
   },
@@ -32,6 +37,7 @@
     "@types/node": "^8.10.25",
     "tslint": "^5.8.0",
     "typescript": "^3.1.4",
+    "vsce": "^1.53.2",
     "vscode": "^1.1.25"
   }
 }
