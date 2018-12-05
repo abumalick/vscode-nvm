@@ -3,6 +3,10 @@
   "displayName": "vscode nvm integration",
   "description": "nvmrc integration",
   "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "abumalick"
+  },
   "engines": {
     "vscode": "^1.29.0"
   },
