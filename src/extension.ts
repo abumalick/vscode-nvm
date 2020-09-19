@@ -1,19 +1,45 @@
-'use strict';
-import * as vscode from 'vscode';
+"use strict";
+import * as vscode from "vscode";
+import { readFileSync } from "fs";
+import { join } from "path";
+
+function readPkgJson() {
+  if (vscode.workspace.workspaceFolders) {
+    const firstFolder = vscode.workspace.workspaceFolders[0];
+    const path = join(firstFolder.uri.path, "package.json");
+    const content = readFileSync(path, "utf-8").replace("\n", "");
+    const pkg = JSON.parse(content);
+    return pkg && pkg.engines && pkg.engines.node;
+  }
+  return null;
+}
+
+function readNvmRc() {
+  if (vscode.workspace.workspaceFolders) {
+    const firstFolder = vscode.workspace.workspaceFolders[0];
+    const path = join(firstFolder.uri.path, ".nvmrc");
+    const content = readFileSync(path, "utf-8").replace("\n", "");
+    return content;
+  }
+  return null;
+}
+
+function getNodeVersion() {
+  return readPkgJson() || readNvmRc();
+}
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "vscode-nvm" is now active!');
+  let version = getNodeVersion();
+  console.log(`Detected repository node version: ${version}`);
 
   const terminals = (<any>vscode.window).terminals;
   if (terminals.length) {
-    // console.log("Found opened terminals, let's change node version");
     terminals.forEach(function switchNode(t: vscode.Terminal) {
-      t.sendText('nvm use');
+      t.sendText(`nvm use ${version}`);
     });
   }
   (<any>vscode.window).onDidOpenTerminal((e: vscode.Terminal) => {
-    // console.log('Terminal opened: ');
-    e.sendText('nvm use');
+    e.sendText(`nvm use ${version}`);
   });
 }
 

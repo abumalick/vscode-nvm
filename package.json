@@ -5,15 +5,15 @@
   "version": "0.0.1",
   "license": "MIT",
   "author": {
-    "name": "abumalick"
+    "name": "richard-lopes-ifood"
   },
   "repository": {
-    "url": "git@github.com:abumalick/vscode-nvm.git",
+    "url": "git@github.com:richard-lopes-ifood/vscode-nvm.git",
     "type": "git"
   },
-  "publisher": "abumalick",
+  "publisher": "richard-lopes-ifood",
   "engines": {
-    "vscode": "^1.29.0"
+    "vscode": "^1.22.0"
   },
   "categories": [
     "Other"
@@ -37,7 +37,7 @@
     "@types/node": "^8.10.25",
     "tslint": "^5.8.0",
     "typescript": "^3.1.4",
-    "vsce": "^1.53.2",
+    "vsce": "^1.79.5",
     "vscode": "^1.1.25"
   }
 }
