@@ -1,19 +1,19 @@
 {
-  "name": "enhanced-vscode-nvm",
+  "name": "vscode-nvm",
   "displayName": "vscode nvm integration",
   "description": "nvmrc integration",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
-    "name": "richard-lopes-ifood"
+    "name": "abumalick"
   },
   "repository": {
-    "url": "git@github.com:richard-lopes-ifood/vscode-nvm.git",
+    "url": "git@github.com:abumalick/vscode-nvm.git",
     "type": "git"
   },
-  "publisher": "richard-lopes-ifood",
+  "publisher": "abumalick",
   "engines": {
-    "vscode": "^1.22.0"
+    "vscode": "^1.29.0"
   },
   "categories": [
     "Other"
@@ -37,7 +37,7 @@
     "@types/node": "^8.10.25",
     "tslint": "^5.8.0",
     "typescript": "^3.1.4",
-    "vsce": "^1.79.5",
+    "vsce": "^1.53.2",
     "vscode": "^1.1.25"
   }
 }
