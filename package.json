@@ -8,7 +8,7 @@
     "name": "abumalick"
   },
   "repository": {
-    "url": "git@github.com:abumalick/vscode-nvm.git",
+    "url": "https://github.com/abumalick/vscode-nvm",
     "type": "git"
   },
   "publisher": "abumalick",
